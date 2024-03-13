@@ -4,9 +4,8 @@ export default function Home() {
   return (
     <div>
       <nav>
-     <h1>MangaJozu</h1>
- </nav>
-      
+        <h1>MangaJozu Home Page</h1>
+      </nav>
     </div>
   );
 }
