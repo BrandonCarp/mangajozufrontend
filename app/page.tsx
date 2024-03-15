@@ -3,9 +3,10 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <nav>
-        <h1>MangaJozu Home Page</h1>
-      </nav>
+      <h1>MangaJozu </h1>
+      <h2>Home Page</h2>
+
+      {/* Slide show component for developers picks  static files*/}
     </div>
   );
 }

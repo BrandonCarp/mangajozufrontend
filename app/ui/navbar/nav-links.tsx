@@ -4,6 +4,23 @@
 // import { usePathname } from "next/navigation";
 // import clsx from "clsx";
 
+// Notes
+// hamburger menu side nav for mobile
+// links from hamburger on nav when large screen
+
+// search icon ok no signup
+// saved anime requires signup/permission?
+// user account
+
+// create color schema, and default font
+export default function Navbar() {
+  return (
+    <div>
+      <h1>Navbar to go here</h1>
+    </div>
+  );
+}
+
 // // Map of links to display in the side navigation.
 // // Depending on the size of the application, this would be stored in a database.
 // const links = [
