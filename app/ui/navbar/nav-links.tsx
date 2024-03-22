@@ -1,8 +1,8 @@
-// "use client";
+"use client";
 
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
-// import clsx from "clsx";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 // Notes
 // hamburger menu side nav for mobile
@@ -13,11 +13,35 @@
 // user account
 
 // create color schema, and default font
+
+const links = [
+  {
+    name: "Home Page",
+    href: "/",
+  },
+
+  { name: "Anime Page", href: "/anime" },
+  // { name: "example page", href: "/example", icon: "example" },
+];
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
-    <div>
-      <h1>Navbar to go here</h1>
-    </div>
+    <>
+      {links.map((link) => {
+        return (
+          <>
+            <Link
+              key={link.name}
+              href={link.href}
+              className={clsx("flex flex-row text-red-800 pl-5")}
+            >
+              <p>{link.name}</p>
+            </Link>
+          </>
+        );
+      })}
+    </>
   );
 }
 
