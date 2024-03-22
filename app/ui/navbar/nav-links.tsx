@@ -34,7 +34,9 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={clsx("flex flex-row text-red-800 pl-5")}
+              className={clsx("flex flex-row  pl-5", {
+                " text-blue-500": pathname === link.href,
+              })}
             >
               <p>{link.name}</p>
             </Link>
