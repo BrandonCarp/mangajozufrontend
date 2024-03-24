@@ -17,8 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased flex`}>
-        <Navbar />
+      <body className={`${inter.className} antialiased `}>
+       <Navbar />
+
         {children}
       </body>
     </html>

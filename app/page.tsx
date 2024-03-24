@@ -1,10 +1,10 @@
 import Image from "next/image";
-
+import Navbar from "./ui/navbar/nav-links";
 export default function Home() {
   return (
-    <>
-      {/* Slide show component for developers picks  static files*/}
-      <h1 className="">Home Page</h1>
-    </>
-  );
+    <div className="flex">
+    <h1>Home Page</h1>
+  </div>
+  )
+ 
 }
