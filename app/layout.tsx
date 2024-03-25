@@ -14,16 +14,13 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>)
- {
+}>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-gray-400`}>
-       <Navbar />
+      <body className={`${inter.className} antialiased `}>
+        <Navbar />
 
-{children}
-
-      
+        {children}
       </body>
     </html>
   );
