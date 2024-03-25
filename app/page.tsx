@@ -1,9 +1,10 @@
-import Image from "next/image";
-import Navbar from "./ui/navbar/nav-links";
+import HomeCarrousel from "./ui/home-carrousel"
+
 export default function Home() {
   return (
     <div className="flex">
-    <h1>Home Page</h1>
+    
+    <HomeCarrousel />
   </div>
   )
  

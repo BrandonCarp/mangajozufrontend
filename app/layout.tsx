@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./ui/navbar/nav-links";
-
+import { useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -14,13 +14,16 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>)
+ {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased `}>
+      <body className={`${inter.className} antialiased bg-gray-400`}>
        <Navbar />
 
-        {children}
+{children}
+
+      
       </body>
     </html>
   );
