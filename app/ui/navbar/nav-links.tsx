@@ -25,7 +25,7 @@ export default function Navbar() {
         <BrowseButton />
       </div>
 
-      <div className="ml-auto ">
+      <div className="ml-auto">
         <div className="flex ml-5">
           {navbarLinks.map((link) => {
             const LinkIcon = link.icon;
@@ -36,7 +36,7 @@ export default function Navbar() {
                 className={clsx(
                   "flex h-[48px] items-center justify-center gap-2  p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3 hover:bg-gray-800 hover:text-white",
                   {
-                    "": pathname === link.href,
+                    "": pathname === link.href,"hidden md:block md:pt-3": link.name === "Favorites",  
                   }
                 )}
               >
