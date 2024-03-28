@@ -12,11 +12,11 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className="flex bg-gray-700 text-gray-300 items-center  pr-10 h-[48px] ">
+    <div className="flex bg-gray-700 text-gray-300 items-center  md:pr-10 h-[48px] ">
       <div className="flex items-center">
         <SideNav />
         <Link
-          className=" ml-5 md:ml-10 mr-5 text-purple-300 hover:text-white flex"
+          className="  md:ml-10  text-purple-300 hover:text-white flex"
           href="/"
         >
           <BookOpenIcon className="w-6" />
@@ -26,7 +26,7 @@ export default function Navbar() {
       </div>
 
       <div className="ml-auto">
-        <div className="flex ml-5">
+        <div className="flex md:ml-5">
           {navbarLinks.map((link) => {
             const LinkIcon = link.icon;
             return (
