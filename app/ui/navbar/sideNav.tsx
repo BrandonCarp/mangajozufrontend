@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function SideNav() {
   return (
     <>
-      <Popover className="w-full block md:hidden ">
+      <Popover className="w-full block md:hidden z-10">
         <Popover.Button className="flex items-center h-[48px]  p-3 hover:bg-gray-800 hover:text-white focus:bg-gray-800 active:bg-gray-800 focus:text-white border-none">
           <Bars3Icon className="h-7 w-7" />
         </Popover.Button>

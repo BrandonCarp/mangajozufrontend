@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function BrowseButton() {
   return (
     <>
-      <Popover className="w-full hidden md:block">
+      <Popover className="w-full hidden md:block z-10">
         <Popover.Button className="flex items-center h-[48px] p-3 hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white border-none">
           <p className="pr-1">Browse</p>
           <ChevronDownIcon className="w-6 h-6" />

@@ -1,25 +1,30 @@
 import Image from "next/image";
-import eov from "../images/eov.jpeg";
-// import img1 from "./images/img1.jpeg";
-// import img2 from "./images/img2.jpeg";
-{
-  /* <CarouselItem  videoId={data.id.videoId} title={data.snippet.title} channelName={channelName}/> */
-}
-export default function CarouselItem() {
-  return (
-    <>
-      <div className="   rounded  mx-3  ">
-        <div className="flex justify-center">
-          <div className="my-5 text-center w-[350px]">
-            <Image src={eov} height={500} width={500} alt="eov"></Image>
+import { StaticImageData } from "next/image";
+import clsx from "clsx";
 
-            <div className="py-3">
-              <h1>Title</h1>
-              {/* <h5 className="text-gray-400 text-sm">{channelName}</h5> */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+interface carouselInterface {
+  image: StaticImageData;
+  isActive: boolean;
+}
+
+export default function CarouselItem({ image, isActive }: carouselInterface) {
+  return (
+    <div
+      className={clsx(
+        "absolute top-0 left-0 w-full h-full transition-opacity duration-1000",
+        {
+          "opacity-100": isActive === true,
+          "opacity-0": isActive === false,
+        }
+      )}
+    >
+      <Image
+        src={image}
+        layout="responsive"
+        objectFit="contain"
+        alt="carousel-item"
+        className="w-full h-full"
+      />
+    </div>
   );
 }

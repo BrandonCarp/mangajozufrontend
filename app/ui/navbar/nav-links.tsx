@@ -36,7 +36,8 @@ export default function Navbar() {
                 className={clsx(
                   "flex h-[48px] items-center justify-center gap-2  p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3 hover:bg-gray-800 hover:text-white",
                   {
-                    "": pathname === link.href,"hidden md:block md:pt-3": link.name === "Favorites",  
+                    "": pathname === link.href,
+                    "hidden md:block md:pt-3": link.name === "Favorites",
                   }
                 )}
               >
