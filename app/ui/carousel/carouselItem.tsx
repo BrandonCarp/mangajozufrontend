@@ -21,7 +21,7 @@ export default function CarouselItem({ image, isActive }: carouselInterface) {
       <Image
         src={image}
         layout="responsive"
-        objectFit="fit"
+        // objectFit="fit"
         alt="carousel-item"
         className="w-full h-full"
       />

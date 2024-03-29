@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
-import RootLayout from "@/app/layout";
+import Home from "@/app/page";
 
 it("renders homepage unchanged", () => {
-  const { container } = render(<RootLayout />);
+  const { container } = render(<Home />);
   expect(container).toMatchSnapshot();
 });

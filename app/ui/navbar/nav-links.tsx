@@ -14,6 +14,7 @@ export default function Navbar() {
   return (
     <>
       <nav
+        data-testid="main-nav"
         role="navigation"
         className="flex bg-gray-700 text-gray-300 items-center  md:pr-10 h-[48px] "
       >

@@ -1,13 +1,22 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import RootLayout from "@/app/layout";
-// npm test -- -u
-describe("RootLayout", () => {
-  it("renders Navbar", () => {
-    render(<RootLayout>Test Children</RootLayout>);
+import Home from "@/app/page";
 
-    const navbar = screen.getByRole("navigation");
+// npm test -- -u
+describe("Home", () => {
+  it("renders a navbar", () => {
+    render(<Home />);
+
+    const navbar = screen.getByTestId("main-nav");
 
     expect(navbar).toBeInTheDocument();
+  });
+
+  it("renders a carousel", () => {
+    render(<Home />);
+
+    const carousel = screen.getByTestId("main-carousel");
+
+    expect(carousel).toBeInTheDocument();
   });
 });

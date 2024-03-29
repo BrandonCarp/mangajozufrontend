@@ -19,7 +19,10 @@ export default function Carousel() {
   }, [currentIndex, images.length]);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div
+      data-testid="main-carousel"
+      className="relative w-screen h-screen overflow-hidden"
+    >
       {images.map((image, index) => (
         <CarouselItem
           key={index}
