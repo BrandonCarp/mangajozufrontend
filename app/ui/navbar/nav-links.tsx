@@ -12,41 +12,46 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className="flex bg-gray-700 text-gray-300 items-center  md:pr-10 h-[48px] ">
-      <div className="flex items-center">
-        <SideNav />
-        <Link
-          className="  md:ml-10  text-purple-300 hover:text-white flex"
-          href="/"
-        >
-          <BookOpenIcon className="w-6" />
-          <p className="ml-1">mangajozu</p>
-        </Link>
-        <BrowseButton />
-      </div>
-
-      <div className="ml-auto">
-        <div className="flex md:ml-5">
-          {navbarLinks.map((link) => {
-            const LinkIcon = link.icon;
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={clsx(
-                  "flex h-[48px] items-center justify-center gap-2  p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3 hover:bg-gray-800 hover:text-white",
-                  {
-                    "": pathname === link.href,
-                    "hidden md:block md:pt-3": link.name === "Favorites",
-                  }
-                )}
-              >
-                {LinkIcon && <LinkIcon className="w-6 h-6" />}
-              </Link>
-            );
-          })}
+    <>
+      <nav
+        role="navigation"
+        className="flex bg-gray-700 text-gray-300 items-center  md:pr-10 h-[48px] "
+      >
+        <div className="flex items-center">
+          <SideNav />
+          <Link
+            className="  md:ml-10  text-purple-300 hover:text-white flex"
+            href="/"
+          >
+            <BookOpenIcon className="w-6" />
+            <p className="ml-1">mangajozu</p>
+          </Link>
+          <BrowseButton />
         </div>
-      </div>
-    </div>
+
+        <div className="ml-auto">
+          <div className="flex md:ml-5">
+            {navbarLinks.map((link) => {
+              const LinkIcon = link.icon;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={clsx(
+                    "flex h-[48px] items-center justify-center gap-2  p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3 hover:bg-gray-800 hover:text-white",
+                    {
+                      "": pathname === link.href,
+                      "hidden md:block md:pt-3": link.name === "Favorites",
+                    }
+                  )}
+                >
+                  {LinkIcon && <LinkIcon className="w-6 h-6" />}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </nav>
+    </>
   );
 }
