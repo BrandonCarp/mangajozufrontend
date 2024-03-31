@@ -25,7 +25,7 @@ export default function Navbar() {
             href="/"
           >
             <BookOpenIcon className="w-6" />
-            <p className="ml-1">mangajozu</p>
+            <p className="ml-1 mr-5">mangajozu</p>
           </Link>
           <BrowseButton />
         </div>
