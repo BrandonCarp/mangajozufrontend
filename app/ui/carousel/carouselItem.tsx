@@ -17,7 +17,11 @@ export default function CarouselItem({ image, isActive }: carouselInterface) {
           "opacity-0": isActive === false,
         }
       )}
-    >
+    >  {/* <div className="absolute mt-[30%] bg-white w-[30rem]">
+        <p className="text-sm">Developers Picks | Genres here</p>
+        <p className="text-sm">ABOUT INFO HERE :Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit aliquam eligendi animi odit quae nihil maxime nisi, sapiente molestias consequuntur facilis repudiandae corporis ducimus odio autem ab enim porro iusto veniam nulla adipisci! Omnis ut quidem ex maiores assumenda quibusdam reprehenderit libero eveniet iusto, nulla ducimus error odit necessitatibus aut?</p>
+      </div>
+     */}
       <Image
         src={image}
         layout="responsive"

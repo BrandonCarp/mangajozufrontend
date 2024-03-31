@@ -9,7 +9,7 @@ export default function Layout({
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className="bg-black">{children}</main>
       <Footer />
     </>
   );

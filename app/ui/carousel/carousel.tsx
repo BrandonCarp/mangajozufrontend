@@ -21,8 +21,9 @@ export default function Carousel() {
   return (
     <div
       data-testid="main-carousel"
-      className="relative w-screen h-screen overflow-hidden"
+      className="relative mt-[48px] w-screen h-screen overflow-hidden"
     >
+      
       {images.map((image, index) => (
         <CarouselItem
           key={index}
@@ -30,6 +31,7 @@ export default function Carousel() {
           isActive={index === currentIndex}
         />
       ))}
+      
     </div>
   );
 }
