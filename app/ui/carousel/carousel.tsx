@@ -1,5 +1,40 @@
 "use client";
 
+// import { useState, useEffect } from "react";
+// import CarouselItem from "./carouselItem";
+// import eov from "../images/eov.jpeg";
+// import img1 from "../images/img1.jpeg";
+// import img2 from "../images/img2.jpeg";
+
+// export default function Carousel() {
+//   const [currentIndex, setCurrentIndex] = useState(0);
+//   const images = [eov, img1, img2];
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+//     }, 5000);
+
+//     return () => clearInterval(interval);
+//   }, [currentIndex, images.length]);
+
+//   return (
+//     <div
+//       data-testid="main-carousel"
+//       className="relative mt-[48px] h-screen overflow-hidden"
+//     >
+//       {images.map((image, index) => (
+//         <CarouselItem
+//           key={index}
+//           image={image}
+//           isActive={index === currentIndex}
+//         />
+//       ))}
+//     </div>
+//   );
+// }
+
+// Carousel.tsx
 import { useState, useEffect } from "react";
 import CarouselItem from "./carouselItem";
 import eov from "../images/eov.jpeg";
@@ -16,14 +51,14 @@ export default function Carousel() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentIndex, images.length]);
+  }, [images.length]);
 
   return (
     <div
       data-testid="main-carousel"
-      className="relative mt-[48px] w-screen h-screen overflow-hidden"
+      className="relative mt-12 "
+      style={{ height: "50vh", maxWidth: "100%" }}
     >
-      
       {images.map((image, index) => (
         <CarouselItem
           key={index}
@@ -31,7 +66,6 @@ export default function Carousel() {
           isActive={index === currentIndex}
         />
       ))}
-      
     </div>
   );
 }
