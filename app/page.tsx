@@ -5,13 +5,13 @@ import { GenreCarousel } from "./ui/carousel/genreCarousel";
 
 export default function Home() {
   return (
-    <div className="bg-black">
+    <div className="bg-black ">
       <Navbar />
-      <div>
-      <Carousel />
-      <GenreCarousel />
+      <div className="relative">
+        <Carousel />
+        <GenreCarousel />
       </div>
-     
+
       <Footer />
     </div>
   );
