@@ -17,30 +17,30 @@ export default function Carousel() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
-  // w320:mb-[-20%] w400:mb-[-30%]  w500:mb-[20%] md:mb-[30%]
+  }, [images]);
+
   return (
-    <div
-      data-testid="main-carousel"
-      className="relative mt-[48px]"
-    >
-      <Image
-        src={images.interval}
-        layout="responsive"
-        alt="carousel-item"
-        className="object-cover "
-      />
-      {/* {images.map((image, index) => (
-      className=" mt-12   mb-[15%] w500:mb-[20%] md:mb-[30%] lg:mb-[5%]"
-      style={{ height: "50vh", maxWidth: "100%" }}
-    >
-      {images.map((image, index) => (
-        <CarouselItem
-          key={index}
-          image={image}
-          isActive={index === currentIndex}
-        />
-      ))} */}
+    <div data-testid="main-carousel" className="relative mt-[48px]">
+      <div className="transition-opacity duration-500 ease-linear">
+        {images.map((image, index) => (
+          <Image
+            key={index}
+            src={image}
+            layout="fill"
+            alt={`carousel-item${index}`}
+            className="absolute top-0 left-0 transition-opacity duration-500"
+          />
+        ))}
+        {/* <Image
+          src={images[currentIndex]}
+          layout="responsive"
+          alt="carousel-item"
+          className="opacity-0"
+          onLoad={(e) => {
+            (e.target as HTMLImageElement).classList.add(`opacity-100`);
+          }}
+        /> */}
+      </div>
     </div>
   );
 }
