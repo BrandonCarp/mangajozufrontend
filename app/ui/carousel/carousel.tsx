@@ -18,17 +18,18 @@ export default function Carousel() {
 
     return () => clearInterval(interval);
   }, [images.length]);
-  // w320:mb-[-20%] w400:mb-[-30%]  w500:mb-[20%] md:mb-[30%]
+
   return (
     <div
       data-testid="main-carousel"
       className="relative mt-[48px]"
+      
     >
       <Image
-        src={images.interval}
-        layout="responsive"
+         src={images[currentIndex]}
+         layout="responsive"
         alt="carousel-item"
-        className="object-cover "
+        className="transition transition-opacity duration-1000 ease-in "
       />
       {/* {images.map((image, index) => (
       className=" mt-12   mb-[15%] w500:mb-[20%] md:mb-[30%] lg:mb-[5%]"
