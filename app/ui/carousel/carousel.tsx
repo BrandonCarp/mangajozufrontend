@@ -17,6 +17,7 @@ export default function Carousel() {
     }, 5000);
 
     return () => clearInterval(interval);
+<<<<<<< HEAD
   }, [images.length]);
 
   return (
@@ -42,6 +43,32 @@ export default function Carousel() {
           isActive={index === currentIndex}
         />
       ))} */}
+=======
+  }, [images]);
+
+  return (
+    <div data-testid="main-carousel" className="relative mt-[48px]">
+      <div className="transition-opacity duration-500 ease-linear">
+        {images.map((image, index) => (
+          <Image
+            key={index}
+            src={image}
+            layout="fill"
+            alt={`carousel-item${index}`}
+            className="absolute top-0 left-0 transition-opacity duration-500"
+          />
+        ))}
+        {/* <Image
+          src={images[currentIndex]}
+          layout="responsive"
+          alt="carousel-item"
+          className="opacity-0"
+          onLoad={(e) => {
+            (e.target as HTMLImageElement).classList.add(`opacity-100`);
+          }}
+        /> */}
+      </div>
+>>>>>>> c885071421352ee84779bff13cb468562a07fab3
     </div>
   );
 }
