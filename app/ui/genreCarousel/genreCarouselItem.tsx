@@ -8,7 +8,7 @@ interface carouselInterface {
 export const GenreCarouselItem = ({ image }: carouselInterface) => {
   return (
     <>
-      <div className="   rounded  mx-3 ">
+      <div className=" mb-5  rounded  mx-3 ">
         <div className="flex justify-center">
           <div className=" text-center w-[300px]">
             <Image

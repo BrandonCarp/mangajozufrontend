@@ -1,5 +1,7 @@
-
-export default function Page() {
-
-  return <h1>Anime Page</h1>;
+export default function Anime() {
+  return (
+    <div className="">
+      <h1>Hi Anime Page</h1>
+    </div>
+  );
 }

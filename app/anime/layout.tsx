@@ -8,6 +8,12 @@ export default function Layout({
 }>) {
   return (
     <>
+      <div className=" bg-black ">
+        <Navbar />
+        <div></div>
+        <Footer />
+      </div>
+
       <Navbar />
       <main className="bg-black">{children}</main>
       <Footer />
