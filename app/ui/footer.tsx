@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <p className="text-white">Footer Here</p>
+      <p className=" bg-red-600 ">Footer Here</p>
     </>
   );
 }

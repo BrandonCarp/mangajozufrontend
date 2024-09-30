@@ -1,4 +1,4 @@
-import { GenreCarouselItem } from "../genreCarouselItem";
+import { GenreCarouselItem } from "./genreCarouselItem";
 import frieren from "../images/frierenCover.jpg";
 
 export const GenreCarousel = () => {
