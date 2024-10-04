@@ -16,7 +16,8 @@ export default function Navbar() {
       <nav
         data-testid="main-nav"
         role="navigation"
-        className="fixed top-0 left-0 right-0 z-50 flex bg-gray-700 text-gray-300 items-center h-[48px] "
+        // className="fixed top-0 left-0 right-0 z-50 flex bg-gray-700 text-gray-300 items-center h-[48px] "
+         className=" flex bg-gray-700 text-gray-300 items-center h-[48px] "
       >
         <div className="flex items-center">
           <SideNav />

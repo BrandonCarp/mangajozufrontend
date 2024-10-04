@@ -6,13 +6,9 @@ import HomeCarousel from "./ui/carousel/oldCarousel/homeCarousel";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-black">
-      <Navbar />
-      <div className="flex-grow">
-        <Carousel />
-        <GenreCarousel />
-      </div>
-      <Footer />
-    </div>
-  );
+   <div>
+<Navbar />
+<h1>Test Text</h1>
+   </div>)
 }
+

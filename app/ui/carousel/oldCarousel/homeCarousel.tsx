@@ -2,7 +2,7 @@
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoPlay from "embla-carousel-autoplay";
-import CarouselImage from "../carouselImage";
+import CarouselImage from "./carouselImage";
 
 export default function HomeCarousel() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [AutoPlay({ })]);
