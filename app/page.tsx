@@ -1,14 +1,10 @@
-import Navbar from "./ui/navbar/nav-links";
-import Footer from "./ui/footer";
-import Carousel from "./ui/carousel/carousel";
-import { GenreCarousel } from "./ui/genreCarousel/genreCarousel";
-import HomeCarousel from "./ui/carousel/oldCarousel/homeCarousel";
-
 export default function Home() {
   return (
-   <div>
-<Navbar />
-<h1>Test Text</h1>
-   </div>)
+    <div>
+      <p>
+        <h1>Manga Jozu</h1>
+    {/* https://dribbble.com/shots/21342871-MangaFox-Manga-Comic-Landingpages */}
+      </p>
+    </div>
+  );
 }
-

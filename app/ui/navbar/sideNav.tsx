@@ -8,16 +8,22 @@ export default function SideNav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-     {isOpen && (
-        <div onClick={() => setIsOpen(!isOpen)} className="fixed inset-0 bg-black opacity-50 z-50"></div>
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(!isOpen)}
+          className="fixed inset-0 bg-black opacity-50 z-50"
+        ></div>
       )}
       <nav role="navigation" className="w-full block md:hidden z-50">
         <Popover>
-          <Popover.Button onClick={() => setIsOpen(!isOpen)} className="flex items-center h-[48px]  p-3 hover:bg-gray-800 hover:text-white focus:bg-gray-800 active:bg-gray-800 focus:text-white border-none focus:outline-none focus:ring-0">
+          <Popover.Button
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex items-center h-[48px]  p-3  hover:text-white  focus:text-white border-none focus:outline-none focus:ring-0"
+          >
             <Bars3Icon className="h-7 w-7" />
           </Popover.Button>
 
-          <Popover.Panel className="absolute  bg-gray-800 text-gray-300 p-2 pb-5 mt-1  top-11"  >
+          <Popover.Panel className="absolute  bg-gray-700 text-gray-300 p-2 pb-5 mt-1  top-11">
             <div className="flex  flex-col">
               <p className="pl-1 text-sm text-white mb-2">Browse</p>
               <div className="flex flex-col border-right-solid">

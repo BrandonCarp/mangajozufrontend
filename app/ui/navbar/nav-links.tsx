@@ -17,14 +17,11 @@ export default function Navbar() {
         data-testid="main-nav"
         role="navigation"
         // className="fixed top-0 left-0 right-0 z-50 flex bg-gray-700 text-gray-300 items-center h-[48px] "
-         className=" flex bg-gray-700 text-gray-300 items-center h-[48px] "
+        className="text-white flex  text-white items-center h-[48px] "
       >
         <div className="flex items-center">
           <SideNav />
-          <Link
-            className="  md:ml-10  text-purple-300 hover:text-white flex"
-            href="/"
-          >
+          <Link className="text-violet-400  md:ml-10    flex" href="/">
             <BookOpenIcon className="w-6" />
             <p className="ml-1 mr-5">mangajozu</p>
           </Link>
@@ -40,7 +37,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={clsx(
-                    "flex h-[48px] items-center justify-center gap-2  p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3 hover:bg-gray-800 hover:text-white",
+                    "flex h-[48px] items-center justify-center gap-2  p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3  hover:text-white",
                     {
                       "": pathname === link.href,
                       "hidden md:block md:pt-3": link.name === "Favorites",
