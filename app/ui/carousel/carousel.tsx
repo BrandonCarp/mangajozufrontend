@@ -9,7 +9,6 @@ import Image from "next/image";
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [eov, img1, img2];
-  const imageUrls = ["eov.jpeg", "img1.jpeg", ".img2.jpeg"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,14 +19,15 @@ export default function Carousel() {
   }, [images]);
 
   return (
-    <div data-testid="main-carousel" className="relative  mt-[48px] ">
-      {/* <CarouselItem image={images[currentIndex]} /> */}
+    <div
+      data-testid="main-carousel"
+      className="relative " // Ensure full width and fixed height
+    >
       <Image
         alt="backgroundCarousel"
         src={images[currentIndex]}
-        className="w-full h-[80%]"
-        width={500}
-        height={500}
+        className="   " // Full width on small screens, auto on larger
+        layout="" // Ensure the image takes the full space of the container
       />
     </div>
   );

@@ -1,10 +1,18 @@
+import Carousel from "./ui/carousel/carousel";
+
+
 export default function Home() {
   return (
-    <div>
-      <p>
-        <h1>Manga Jozu</h1>
-    {/* https://dribbble.com/shots/21342871-MangaFox-Manga-Comic-Landingpages */}
-      </p>
+    <div className="">
+     <div className="flex flex-col   items-center justify-center">
+     {/* <h1 className="font-raleway  text-lg">manga Jozu</h1> */}
+        
+        <Carousel />
+        
+     </div>
+       
+
+      
     </div>
   );
 }
