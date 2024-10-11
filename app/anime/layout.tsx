@@ -1,4 +1,4 @@
-import Navbar from "../ui/navbar/nav-links";
+import Navbar from "../ui/navbar/navbar";
 import Footer from "../ui/footer";
 
 export default function Layout({

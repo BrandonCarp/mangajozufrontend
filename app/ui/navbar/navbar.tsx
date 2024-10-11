@@ -25,6 +25,7 @@ export default function Navbar() {
             <BookOpenIcon className="w-6" />
             <p className="ml-1 mr-5">mangajozu</p>
           </Link>
+          {/* browseNav component */}
           <BrowseButton />
         </div>
 
