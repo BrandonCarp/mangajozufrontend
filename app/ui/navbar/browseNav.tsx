@@ -35,6 +35,7 @@ export default function BrowseButton() {
 
           {/* Side List */}
           <div className="w-full">
+            
             <p className="pl-[5px] pb-2">Genres</p>
             <div className="grid grid-rows-4 grid-flow-col gap-3">
               {genreLinks.map((link) => (

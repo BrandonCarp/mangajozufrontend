@@ -19,6 +19,7 @@ export default function Navbar() {
         // className="fixed top-0 left-0 right-0 z-50 flex bg-gray-700 text-gray-300 items-center h-[48px] "
         className="text-white flex   items-center h-[48px] "
       >
+      
         <div className="flex items-center">
           <SideNav />
           <Link className="text-violet-400  md:ml-10    flex" href="/">
@@ -29,6 +30,7 @@ export default function Navbar() {
           <BrowseButton />
         </div>
 
+{/* Search bar to edit here */}
         <div className="ml-auto">
           <div className="flex md:ml-5">
             {navbarLinks.map((link) => {
@@ -49,6 +51,7 @@ export default function Navbar() {
                 </Link>
               );
             })}
+          
           </div>
         </div>
       </nav>
